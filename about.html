@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | ARVA NGO Federation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .reveal.fade-in-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .about-hero {
+            background: linear-gradient(rgba(15, 76, 129, 0.8), rgba(15, 76, 129, 0.8)), url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .mission-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .mission-card {
+            background: white;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .mission-card i {
+            font-size: 3rem;
+            color: var(--secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .team-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .team-img {
+            height: 250px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .team-info {
+            padding: 1.5rem;
+        }
+
+        .team-info h4 {
+            margin-bottom: 0.5rem;
+        }
+
+        .team-info p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .about-hero {
+                background-attachment: scroll;
+                min-height: 200px;
+            }
+            .team-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .team-img {
+                height: 200px;
+            }
+            .mission-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .about-hero {
+                height: 35vh;
+            }
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+            .team-img {
+                height: 240px;
+            }
+            .mission-card {
+                padding: 2rem 1.25rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="nav-container container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>ARVA NGO<span> Federation</span></h1>
+                </a>
+            </div>
+            <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
+            <nav class="nav-links">
+                <div class="nav-item"><a href="index.html">Home</a></div>
+                <div class="nav-item active"><a href="about.html">About Us</a></div>
+                <div class="nav-item"><a href="focus-areas.html">Focus Areas</a></div>
+                <div class="nav-item"><a href="services.html">Services</a></div>
+                <div class="nav-item"><a href="project.html">Projects</a></div>
+                <div class="nav-item"><a href="gallery.html">Gallery</a></div>
+                <div class="nav-item"><a href="contact.html">Contact Us</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="about-hero">
+        <div class="reveal fade-in-visible">
+            <h1>About Us</h1>
+            <p>Empowering NGOs, Building a Stronger Future</p>
+        </div>
+    </section>
+
+    <!-- About Federation -->
+    <section id="about" class="section container">
+        <div class="reveal">
+            <div class="section-title">
+                <h2>About the Federation</h2>
+                <p>Collaborating for structural excellence in the social sector.</p>
+            </div>
+        </div>
+        <div style="display: flex; gap: 3rem; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 300px;" class="reveal">
+                <p style="margin-bottom: 1.5rem;">The ARVA NGO Federation was established to address the critical gaps
+                    in organizational capacity, transparency, and resource access for grassroots NGOs in India. We
+                    believe that small, rural organizations are the real drivers of change, but they often lack the
+                    systemic support needed to thrive in a complex regulatory environment.</p>
+                <p>Our federation serves as a unified platform where NGOs can seek guidance on legal compliance,
+                    professional proposal writing, and sustainable fundraising strategies. By fostering a culture of
+                    collaboration over competition, we leverage collective intelligence to solve systemic problems in
+                    education, health, and rural development.</p>
+            </div>
+            <div style="flex: 1; min-width: 300px;" class="reveal">
+                <div
+                    style="background: var(--bg-white); padding: 1rem; border-radius: 12px; border-left: 5px solid var(--primary); box-shadow: var(--shadow-sm); overflow: hidden;">
+                    <img src="images/services/service_proposal.png" alt="Strategic Planning"
+                        style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px;">
+                </div>
+            </div>
+        </div>
+
+        <div class="reveal" style="margin-top: 5rem;">
+            <div class="section-title">
+                <h2>Our Methodology</h2>
+                <p>A structured approach to transforming grassroots efforts into national-scale impact.</p>
+            </div>
+        </div>
+
+        <div class="approach-grid">
+            <!-- Step 1 -->
+            <div class="approach-card reveal">
+                <div class="approach-number">1</div>
+                <h3>Grassroots Discovery</h3>
+                <p>Deep engagement with rural communities to identify absolute social needs and existing resource
+                    gaps.</p>
+            </div>
+            <!-- Step 2 -->
+            <div class="approach-card reveal">
+                <div class="approach-number">2</div>
+                <h3>Capacity Building</h3>
+                <p>Providing technical tools, legal advocacy, and leadership training to professionalize NGO
+                    operations.</p>
+            </div>
+            <!-- Step 3 -->
+            <div class="approach-card reveal">
+                <div class="approach-number">3</div>
+                <h3>Strategic Synergy</h3>
+                <p>Connecting high-performing NGOs with corporate CSR partners and government development schemes.</p>
+            </div>
+            <!-- Step 4 -->
+            <div class="approach-card reveal">
+                <div class="approach-number">4</div>
+                <h3>Sustainable Impact</h3>
+                <p>Implementing rigorous monitoring and reporting frameworks to ensure long-term community growth.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Mission -->
+    <section id="vision" class="section container" style="background-color: #f1f5f9;">
+        <div class="reveal">
+            <div class="section-title">
+                <h2>Vision & Mission</h2>
+                <p>Defining our purpose and our path forward.</p>
+            </div>
+        </div>
+        <div class="mission-grid">
+            <div class="mission-card reveal">
+                <i class="fa-solid fa-eye"></i>
+                <h3>Our Vision</h3>
+                <p>To create a vibrant and credible social sector where every grassroots NGO is empowered with the
+                    capacity to foster long-lasting community impact.</p>
+            </div>
+            <div class="mission-card reveal">
+                <i class="fa-solid fa-bullseye"></i>
+                <h3>Our Mission</h3>
+                <p>To strengthen the social sector ecosystem by providing capacity building, legal advocacy, and
+                    strategic resource support to grassroots organizations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Objectives -->
+    <section id="objectives" class="section container">
+        <div class="reveal">
+            <div class="section-title">
+                <h2>Our Objectives</h2>
+                <p>Strategic goals that drive our daily operations.</p>
+            </div>
+        </div>
+        <div class="objectives-grid">
+            <div class="reveal objective-card">
+                <div class="objective-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <div class="objective-info">
+                    <h4>Capacity Building</h4>
+                    <p>Empowering NGO leaders with organizational and management skills.</p>
+                </div>
+            </div>
+            <div class="reveal objective-card">
+                <div class="objective-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <div class="objective-info">
+                    <h4>Legal & Compliance</h4>
+                    <p>Ensuring 100% compliance for all member NGOs with state and central laws.</p>
+                </div>
+            </div>
+            <div class="reveal objective-card">
+                <div class="objective-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <div class="objective-info">
+                    <h4>Resource Mobilization</h4>
+                    <p>Bridging the gap between corporate CSR funds and high-impact rural project.</p>
+                </div>
+            </div>
+            <div class="reveal objective-card">
+                <div class="objective-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <div class="objective-info">
+                    <h4>Advocacy</h4>
+                    <p>Representing the collective interests of grassroots NGOs at policy levels.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section id="leadership" class="section container" style="background-color: var(--bg-white);">
+        <div class="reveal">
+            <div class="section-title">
+                <h2>Our Leadership</h2>
+                <p>Guided by professionals with decades of social sector experience.</p>
+            </div>
+        </div>
+        <div class="team-grid">
+            <div class="team-card reveal">
+                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop"
+                    alt="Director" class="team-img">
+                <div class="team-info">
+                    <h4>Dr. Arvind Kumar</h4>
+                    <p>Executive Director</p>
+                </div>
+            </div>
+            <div class="team-card reveal">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop"
+                    alt="CFO" class="team-img">
+                <div class="team-info">
+                    <h4>Sarah Johnson</h4>
+                    <p>Head of Partnerships</p>
+                </div>
+            </div>
+            <div class="team-card reveal">
+                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2070&auto=format&fit=crop"
+                    alt="Legal" class="team-img">
+                <div class="team-info">
+                    <h4>Adv. Rajesh Mehta</h4>
+                    <p>Legal & Compliance Advisor</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4 style="color: white; font-size: 1.5rem; margin-bottom: 1.5rem;">ARVA NGO<span> Federation</span>
+                </h4>
+                <p>Empowering grassroots organizations through capacity building, resources, and sustainable strategies
+                    for a better tomorrow.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html"><i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i>
+                            Home</a></li>
+                    <li><a href="about.html"><i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i> About
+                            Us</a></li>
+                    <li><a href="focus-areas.html"><i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i>
+                            Focus Areas</a></li>
+                    <li><a href="services.html"><i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i>
+                            Services</a></li>
+                    <li><a href="contact.html"><i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i>
+                            Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="services.html#schemes">Govt Schemes</a></li>
+                    <li><a href="services.html#csr">CSR Support</a></li>
+                    <li><a href="services.html#legal">Legal & Compliance</a></li>
+                    <li><a href="services.html#proposals">Proposal Writing</a></li>
+                    <li><a href="services.html#funding">Fundraising</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col" id="footer-contact">
+                <h4>Newsletter</h4>
+                <p style="font-size: 0.9rem; margin-bottom: 1rem;">Subscribe to get the latest updates and news.</p>
+                <form class="newsletter-form">
+                    <div class="newsletter-input-group">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                </form>
+                <div style="margin-top: 2rem;">
+                    <ul style="opacity: 0.8;">
+                        <li style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.5rem;"><i
+                                class="fa-solid fa-location-dot"></i> Krishnagiri</li>
+                        <li style="display: flex; align-items: center; gap: 10px;"><i class="fa-solid fa-envelope"></i>
+                            arvongofedaration@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="developer-logo">
+            Powered by
+            <a href="https://aspirentech.com" target="_blank">
+                <img src="https://aspirentech.com/assets/aspirentech-logo-new-B7I5o4Z6.png" alt="AspirenTech"
+                    height="20">
+            </a>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

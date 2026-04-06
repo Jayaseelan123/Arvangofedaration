@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NGO Services | ARVA NGO Federation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .reveal.fade-in-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .services-hero {
+            background: linear-gradient(rgba(15, 76, 129, 0.8), rgba(15, 76, 129, 0.8)), url('images/gallery-hero.png');
+            background-size: cover;
+            background-position: center;
+            height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 3rem 2rem;
+            border-radius: 15px;
+            border-bottom: 5px solid #e2e8f0;
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-bottom-color: var(--secondary);
+            box-shadow: var(--shadow-md);
+        }
+
+        .service-card i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card h3 {
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .cta-box {
+            background: var(--bg-white);
+            padding: 4rem;
+            border-radius: 20px;
+            text-align: center;
+            margin-top: 5rem;
+            box-shadow: var(--shadow-md);
+            border-top: 5px solid var(--accent);
+        }
+
+        @media (max-width: 768px) {
+            .services-hero {
+                background-attachment: scroll;
+                min-height: 200px;
+            }
+            .service-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .cta-box {
+                padding: 2.5rem 1.5rem;
+                margin-top: 3rem;
+            }
+            .cta-box h2 {
+                font-size: 1.6rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .services-hero {
+                height: 35vh;
+            }
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+            .cta-box {
+                padding: 2rem 1rem;
+                margin-top: 2.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="nav-container container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>ARVA NGO<span> Federation</span></h1>
+                </a>
+            </div>
+            <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
+            <nav class="nav-links">
+                <div class="nav-item"><a href="index.html">Home</a></div>
+                <div class="nav-item"><a href="about.html">About Us</a></div>
+                <div class="nav-item"><a href="focus-areas.html">Focus Areas</a></div>
+                <div class="nav-item"><a href="services.html">Services</a></div>
+                <div class="nav-item"><a href="project.html">Projects</a></div>
+                <div class="nav-item"><a href="gallery.html">Gallery</a></div>
+                <div class="nav-item"><a href="contact.html">Contact Us</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="services-hero">
+        <div class="reveal fade-in-visible">
+            <h1>NGO Support Services</h1>
+            <p>Empowering organizations with professional capacity building and expert legal support.</p>
+        </div>
+    </section>
+
+    <div class="section container">
+        <div class="reveal">
+            <div class="section-title">
+                <h2>Comprehensive Professional Support</h2>
+                <p>We provide end-to-end services to help NGOs achieve structural excellence and sustainability.</p>
+            </div>
+        </div>
+
+        <div class="service-grid">
+            <!-- Government Schemes Awareness -->
+            <div id="schemes" class="service-card reveal">
+                <div class="service-card-img">
+                    <img src="images/services/service_schemes.png" alt="Govt Schemes Awareness">
+                </div>
+                <div class="service-card-content">
+                    <h3>Govt Schemes Awareness</h3>
+                    <p>Bridging the information gap between government initiatives and rural beneficiaries. We assist
+                        NGOs in identifying and implementing relevant schemes.</p>
+                </div>
+            </div>
+
+            <!-- CSR Funding Support -->
+            <div id="csr" class="service-card reveal">
+                <div class="service-card-img">
+                    <img src="images/services/service_csr.png" alt="CSR Funding Support">
+                </div>
+                <div class="service-card-content">
+                    <h3>CSR Funding Support</h3>
+                    <p>Expert guidance on connecting with corporate partners, aligning with CSR mandates, and managing
+                        partnership expectations professionally.</p>
+                </div>
+            </div>
+
+            <!-- Proposal Writing -->
+            <div id="proposal" class="service-card reveal">
+                <div class="service-card-img">
+                    <img src="images/services/service_proposal.png" alt="Proposal Writing Support">
+                </div>
+                <div class="service-card-content">
+                    <h3>Proposal Writing Support</h3>
+                    <p>Crafting high-fidelity, evidence-based project proposals that resonate with international donors
+                        and corporate CSR heads.</p>
+                </div>
+            </div>
+
+            <!-- Legal & Compliance -->
+            <div id="compliance" class="service-card reveal">
+                <div class="service-card-img">
+                    <img src="images/services/service_legal.png" alt="Legal & Compliance">
+                </div>
+                <div class="service-card-content">
+                    <h3>Legal & Compliance</h3>
+                    <p>Comprehensive assistance for 12A, 80G, CSR-1 and FCRA registrations. We ensure your NGO stays
+                        100% compliant with changing legal frameworks.</p>
+                </div>
+            </div>
+
+            <!-- Fundraising Strategies -->
+            <div id="fundraising" class="service-card reveal">
+                <div class="service-card-img">
+                    <img src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?q=80&w=2070&auto=format&fit=crop"
+                        alt="Fundraising & Donor Strategy">
+                </div>
+                <div class="service-card-content">
+                    <h3>Fundraising & Donor Strategy</h3>
+                    <p>Developing multi-channel fundraising models, from local community micro-donations to large-scale
+                        institutional grants.</p>
+                </div>
+            </div>
+
+            <!-- Project Planning & Budgeting -->
+            <div id="planning" class="service-card reveal">
+                <div class="service-card-img">
+                    <img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=80&w=2068&auto=format&fit=crop"
+                        alt="Project Planning & Budgeting">
+                </div>
+                <div class="service-card-content">
+                    <h3>Project Planning & Budgeting</h3>
+                    <p>Structural planning to optimize resource allocation and ensure financial transparency in project
+                        delivery.</p>
+                </div>
+            </div>
+
+            <!-- Monitoring & Reporting -->
+            <div id="monitoring" class="service-card reveal">
+                <div class="service-card-img">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop"
+                        alt="Monitoring & Reporting">
+                </div>
+                <div class="service-card-content">
+                    <h3>Monitoring & Reporting</h3>
+                    <p>Implementation of cloud-based MIS tools and systematic reporting frameworks to measure and
+                        showcase real-time impact.</p>
+                </div>
+            </div>
+
+            <!-- Sustainability Planning -->
+            <div id="sustainability" class="service-card reveal">
+                <div class="service-card-img">
+                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=2013&auto=format&fit=crop"
+                        alt="Sustainability Planning">
+                </div>
+                <div class="service-card-content">
+                    <h3>Sustainability Planning</h3>
+                    <p>Designing long-term roadmaps to ensure NGO initiatives continue to thrive beyond the initial
+                        grant or funding cycle.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-box reveal">
+            <h2>Need Personalized Support?</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 2rem; opacity: 0.8;">Our expert advisors are ready to help your
+                NGO reach the next level of excellence.</p>
+            <a href="contact.html" class="btn btn-primary" style="background-color: var(--primary);">Schedule a
+                Consultation</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4 style="color: white; font-size: 1.5rem; margin-bottom: 1.5rem;">ARVA NGO<span> Federation</span>
+                </h4>
+                <p>Empowering grassroots organizations through capacity building, resources, and sustainable strategies
+                    for a better tomorrow.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html"><i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i>
+                            Home</a></li>
+                    <li><a href="about.html"><i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i> About
+                            Us</a></li>
+                    <li><a href="focus-areas.html"><i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i>
+                            Focus Areas</a></li>
+                    <li><a href="services.html"><i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i>
+                            Services</a></li>
+                    <li><a href="contact.html"><i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i>
+                            Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="services.html#schemes">Govt Schemes</a></li>
+                    <li><a href="services.html#csr">CSR Support</a></li>
+                    <li><a href="services.html#legal">Legal & Compliance</a></li>
+                    <li><a href="services.html#proposals">Proposal Writing</a></li>
+                    <li><a href="services.html#funding">Fundraising</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <p style="font-size: 0.9rem; margin-bottom: 1rem;">Subscribe to get the latest updates and news.</p>
+                <form class="newsletter-form">
+                    <div class="newsletter-input-group">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                </form>
+                <div style="margin-top: 2rem;">
+                    <ul style="opacity: 0.8;">
+                        <li style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.5rem;"><i
+                                class="fa-solid fa-location-dot"></i> Krishnagiri</li>
+                        <li style="display: flex; align-items: center; gap: 10px;"><i class="fa-solid fa-envelope"></i>
+                            arvongofedaration@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="developer-logo">
+            Powered by
+            <a href="https://aspirentech.com" target="_blank">
+                <img src="https://aspirentech.com/assets/aspirentech-logo-new-B7I5o4Z6.png" alt="AspirenTech"
+                    height="20">
+            </a>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

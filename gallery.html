@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | ARVA NGO Federation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .reveal.fade-in-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .gallery-hero {
+            background: linear-gradient(rgba(15, 76, 129, 0.8), rgba(15, 76, 129, 0.8)), url('images/gallery-hero.png');
+            background-size: cover;
+            background-position: center;
+            height: 35vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .gallery-grid {
+            display: block;
+            columns: 3 300px;
+            column-gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .gallery-item {
+            break-inside: avoid;
+            margin-bottom: 1.5rem;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            position: relative;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.02);
+            box-shadow: var(--shadow-md);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            display: block;
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+            color: white;
+            padding: 1.5rem;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .video-container {
+            margin-top: 5rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .video-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .video-placeholder {
+            height: 250px;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            position: relative;
+        }
+
+        .video-placeholder i {
+            font-size: 4rem;
+            opacity: 0.8;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .video-placeholder i:hover {
+            transform: scale(1.2);
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .gallery-hero {
+                background-attachment: scroll;
+                min-height: 180px;
+            }
+            .gallery-grid {
+                columns: 2 220px;
+                column-gap: 1rem;
+            }
+            .video-placeholder {
+                height: 200px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .gallery-hero {
+                height: 30vh;
+            }
+            .gallery-grid {
+                columns: 1;
+                column-gap: 0;
+            }
+            .gallery-item {
+                margin-bottom: 1rem;
+                border-radius: 10px;
+            }
+            .video-placeholder {
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="nav-container container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>ARVA NGO<span> Federation</span></h1>
+                </a>
+            </div>
+            <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
+            <nav class="nav-links">
+                <div class="nav-item"><a href="index.html">Home</a></div>
+                <div class="nav-item"><a href="about.html">About Us</a></div>
+                <div class="nav-item"><a href="focus-areas.html">Focus Areas</a></div>
+                <div class="nav-item"><a href="services.html">Services</a></div>
+                <div class="nav-item"><a href="project.html">Projects</a></div>
+                <div class="nav-item active"><a href="gallery.html">Gallery</a></div>
+                <div class="nav-item"><a href="contact.html">Contact Us</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="gallery-hero">
+        <div class="reveal fade-in-visible">
+            <h1>Gallery</h1>
+            <p>Visual highlights of our collaborative efforts across the social sector.</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+
+
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- DMIT -->
+                <div class="gallery-item" data-category="dmit">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2070&auto=format&fit=crop"
+                        alt="Scientific Brain Mapping">
+                </div>
+                <!-- Training -->
+                <div class="gallery-item" data-category="training">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    <img src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?q=80&w=2070&auto=format&fit=crop"
+                        alt="Student Training Session">
+                </div>
+                <!-- Workshops -->
+                <div class="gallery-item" data-category="workshops">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2022&auto=format&fit=crop"
+                        alt="Interactive Workshop">
+                </div>
+                <!-- Outdoor -->
+                <div class="gallery-item" data-category="outdoor">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=2013&auto=format&fit=crop"
+                        alt="Outdoor Team Building">
+                </div>
+                <!-- DMIT 2 -->
+                <div class="gallery-item" data-category="dmit">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=2080&auto=format&fit=crop"
+                        alt="Fingerprint Analysis">
+                </div>
+                <!-- Training 2 -->
+                <div class="gallery-item" data-category="training">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1932&auto=format&fit=crop"
+                        alt="Professional Development">
+                </div>
+
+                <div class="gallery-item" data-category="training">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    <img src="images/gallery-hero.png" alt="Professional Development">
+                </div>
+
+
+
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4 style="color: white; font-size: 1.5rem; margin-bottom: 1.5rem;">ARVA NGO<span> Federation</span>
+                </h4>
+                <p>Empowering grassroots organizations through capacity building, resources, and sustainable strategies
+                    for a better tomorrow.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html"><i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i>
+                            Home</a></li>
+                    <li><a href="about.html"><i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i> About
+                            Us</a></li>
+                    <li><a href="focus-areas.html"><i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i>
+                            Focus Areas</a></li>
+                    <li><a href="services.html"><i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i>
+                            Services</a></li>
+                    <li><a href="contact.html"><i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i>
+                            Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="services.html#schemes">Govt Schemes</a></li>
+                    <li><a href="services.html#csr">CSR Support</a></li>
+                    <li><a href="services.html#legal">Legal & Compliance</a></li>
+                    <li><a href="services.html#proposals">Proposal Writing</a></li>
+                    <li><a href="services.html#funding">Fundraising</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <p style="font-size: 0.9rem; margin-bottom: 1rem;">Subscribe to get the latest updates and news.</p>
+                <form class="newsletter-form">
+                    <div class="newsletter-input-group">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                </form>
+                <div style="margin-top: 2rem;">
+                    <ul style="opacity: 0.8;">
+                        <li style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.5rem;"><i
+                                class="fa-solid fa-location-dot"></i> Krishnagiri</li>
+                        <li style="display: flex; align-items: center; gap: 10px;"><i class="fa-solid fa-envelope"></i>
+                            arvongofedaration@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="developer-logo">
+            Powered by
+            <a href="https://aspirentech.com" target="_blank">
+                <img src="https://aspirentech.com/assets/aspirentech-logo-new-B7I5o4Z6.png" alt="AspirenTech"
+                    height="20">
+            </a>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects & Events | ARVA NGO Federation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .reveal.fade-in-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .project-hero {
+            background: linear-gradient(rgba(15, 76, 129, 0.8), rgba(15, 76, 129, 0.8)), url('https://images.unsplash.com/photo-1542810634-71277d95dcbb?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .Project-list {
+            margin-top: 3rem;
+        }
+
+        .Project-item {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .Project-item:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-5px);
+        }
+
+        .Project-img {
+            flex: 1;
+            min-width: 300px;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .Project-content {
+            flex: 1.5;
+            padding: 3rem;
+            position: relative;
+        }
+
+        .Project-tag {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: #e3f2fd;
+            color: #1976d2;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .Project-content h3 {
+            margin-bottom: 1rem;
+            color: var(--primary);
+            font-size: 1.8rem;
+        }
+
+        .Project-content p {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .event-timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 4rem auto 0;
+            padding-left: 50px;
+            padding-bottom: 50px;
+        }
+
+        .event-timeline::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: var(--primary-light);
+        }
+
+        .event-node {
+            position: relative;
+            margin-bottom: 4rem;
+        }
+
+        .event-node::after {
+            content: '';
+            position: absolute;
+            left: -38px;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            background: var(--secondary);
+            border: 4px solid white;
+            border-radius: 50%;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .event-node h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .event-node .date {
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .event-node p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 768px) {
+            .project-hero {
+                background-attachment: scroll;
+                min-height: 200px;
+            }
+            .Project-item {
+                flex-direction: column;
+            }
+            .Project-img {
+                width: 100%;
+                min-width: unset;
+                height: 220px;
+            }
+            .Project-content {
+                padding: 1.75rem 1.5rem;
+            }
+            .Project-content h3 {
+                font-size: 1.45rem;
+                padding-right: 5rem;
+            }
+            .event-timeline {
+                padding-left: 36px;
+                margin-top: 2.5rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .project-hero {
+                height: 35vh;
+            }
+            .Project-img {
+                height: 190px;
+            }
+            .Project-content {
+                padding: 1.25rem 1rem;
+            }
+            .Project-content h3 {
+                font-size: 1.2rem;
+                padding-right: 0;
+            }
+            .Project-tag {
+                position: static;
+                display: inline-block;
+                margin-bottom: 0.75rem;
+            }
+            .event-timeline {
+                padding-left: 28px;
+            }
+            .event-node::after {
+                left: -26px;
+                width: 16px;
+                height: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="nav-container container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>ARVA NGO<span> Federation</span></h1>
+                </a>
+            </div>
+            <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
+            <nav class="nav-links">
+                <div class="nav-item"><a href="index.html">Home</a></div>
+                <div class="nav-item"><a href="about.html">About Us</a></div>
+                <div class="nav-item"><a href="focus-areas.html">Focus Areas</a></div>
+                <div class="nav-item"><a href="services.html">Services</a></div>
+                <div class="nav-item active"><a href="project.html">Projects</a></div>
+                <div class="nav-item"><a href="gallery.html">Gallery</a></div>
+                <div class="nav-item"><a href="contact.html">Contact Us</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="project-hero">
+        <div class="reveal fade-in-visible">
+            <h1>Our Projects & Events</h1>
+            <p>Driving impact through systematic interventions and collaborative initiatives.</p>
+        </div>
+    </section>
+
+    <!-- Ongoing project -->
+    <section id="ongoing" class="section container">
+        <div class="reveal">
+            <div class="section-title">
+                <h2>Ongoing project</h2>
+                <p>Scaling our successful initiatives for broader impact.</p>
+            </div>
+        </div>
+
+        <div class="Project-list">
+            <div class="Project-item reveal">
+                <img src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?q=80&w=2070&auto=format&fit=crop"
+                    alt="Capacity Building" class="Project-img">
+                <div class="Project-content">
+                    <span class="Project-tag">Capacity Building</span>
+                    <h3>The NGO Sahayak Project</h3>
+                    <p>An intensive 12-month engagement assisting grassroots NGOs with organizational development,
+                        structural transparency, and digital adoption.</p>
+                    <a href="#" class="btn btn-outline"
+                        style="color: var(--primary); border-color: var(--primary);">View Project Roadmap</a>
+                </div>
+            </div>
+
+            <div class="Project-item reveal">
+                <img src="https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?q=80&w=2070&auto=format&fit=crop"
+                    alt="Legal" class="Project-img">
+                <div class="Project-content">
+                    <span class="Project-tag">Compliance</span>
+                    <h3>Compliance Champion Drive</h3>
+                    <p>Enabling NGOs to achieve 100% legal compliance and transparency through systemic audits and
+                        certification support (12A, 80G, CSR-1).</p>
+                    <a href="#" class="btn btn-outline"
+                        style="color: var(--primary); border-color: var(--primary);">Project Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming project -->
+    <section id="upcoming" class="section container" style="background-color: var(--bg-white);">
+        <div class="reveal">
+            <div class="section-title">
+                <h2>Upcoming Initiatives</h2>
+                <p>Exciting new project designed to address evolving social challenges.</p>
+            </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem;">
+            <div class="reveal"
+                style="background: var(--bg-light); padding: 3rem 2rem; border-radius: 12px; border-left: 5px solid var(--secondary);">
+                <div class="date" style="color: var(--secondary); font-weight: 700; margin-bottom: 0.5rem;">Launching
+                    May 2026</div>
+                <h4 style="margin-bottom: 1rem; color: var(--primary);">Digital NGO Transformation</h4>
+                <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.6;">A tech-first Project focused
+                    on providing cloud MIS systems and digital marketing training to 50 member NGOs.</p>
+            </div>
+
+            <div class="reveal"
+                style="background: var(--bg-light); padding: 3rem 2rem; border-radius: 12px; border-left: 5px solid var(--secondary);">
+                <div class="date" style="color: var(--secondary); font-weight: 700; margin-bottom: 0.5rem;">Launching
+                    June 2026</div>
+                <h4 style="margin-bottom: 1rem; color: var(--primary);">CSR Connect 2.0</h4>
+                <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.6;">Our flagship networking
+                    platform facilitating face-to-face interactions between corporate funders and high-performing NGOs.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Timeline -->
+    <section id="events" class="section container">
+        <div class="reveal">
+            <div class="section-title">
+                <h2>Our Impact Events</h2>
+                <p>A timeline of our recent workshops, conferences, and collaborative meetups.</p>
+            </div>
+        </div>
+
+        <div class="event-timeline">
+            <div class="event-node reveal">
+                <div class="date">Dec 12, 2025</div>
+                <h4>Annual NGO Leaders Summit</h4>
+                <p>Brought together 200+ NGO leaders from across the state to discuss structural changes in the social
+                    sector funding landscape.</p>
+            </div>
+
+            <div class="event-node reveal">
+                <div class="date">Nov 05, 2025</div>
+                <h4>Proposal Writing Workshop</h4>
+                <p>An intensive 3-day workshop where 30 NGOs crafted high-quality project proposals for upcoming global
+                    grant opportunities.</p>
+            </div>
+
+            <div class="event-node reveal">
+                <div class="date">Oct 18, 2025</div>
+                <h4>CSR Conclave: Building Trust</h4>
+                <p>Facilitated a dialogue between the state federation and corporate CSR heads to bridge the trust gap
+                    in rural project delivery.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4 style="color: white; font-size: 1.5rem; margin-bottom: 1.5rem;">ARVA NGO<span> Federation</span>
+                </h4>
+                <p>Empowering grassroots organizations through capacity building, resources, and sustainable strategies
+                    for a better tomorrow.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html"><i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i>
+                            Home</a></li>
+                    <li><a href="about.html"><i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i> About
+                            Us</a></li>
+                    <li><a href="focus-areas.html"><i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i>
+                            Focus Areas</a></li>
+                    <li><a href="services.html"><i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i>
+                            Services</a></li>
+                    <li><a href="contact.html"><i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i>
+                            Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="services.html#schemes">Govt Schemes</a></li>
+                    <li><a href="services.html#csr">CSR Support</a></li>
+                    <li><a href="services.html#legal">Legal & Compliance</a></li>
+                    <li><a href="services.html#proposals">Proposal Writing</a></li>
+                    <li><a href="services.html#funding">Fundraising</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <p style="font-size: 0.9rem; margin-bottom: 1rem;">Subscribe to get the latest updates and news.</p>
+                <form class="newsletter-form">
+                    <div class="newsletter-input-group">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                </form>
+                <div style="margin-top: 2rem;">
+                    <ul style="opacity: 0.8;">
+                        <li style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.5rem;"><i
+                                class="fa-solid fa-location-dot"></i>Krishnagiri</li>
+                        <li style="display: flex; align-items: center; gap: 10px;"><i class="fa-solid fa-envelope"></i>
+                            arvongofedaration@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom container">
+            <p>&copy; 2026 ARVA NGO Federation. All Rights Reserved.</p>
+            <div class="developer-logo">
+                Powered by
+                <a href="https://aspirentech.com" target="_blank">
+                    <img src="https://aspirentech.com/assets/aspirentech-logo-new-B7I5o4Z6.png" alt="AspirenTech"
+                        height="20">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

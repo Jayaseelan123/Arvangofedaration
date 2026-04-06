@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus Areas | ARVA NGO Federation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .reveal.fade-in-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .focus-hero {
+            background: linear-gradient(rgba(15, 76, 129, 0.8), rgba(15, 76, 129, 0.8)), url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+
+        .focus-row {
+            display: flex;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 8rem;
+            flex-wrap: wrap;
+        }
+
+        .focus-row:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .focus-image {
+            flex: 1;
+            min-width: 300px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+
+        .focus-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .focus-image img:hover {
+            transform: scale(1.05);
+        }
+
+        .focus-content {
+            flex: 1.2;
+            min-width: 300px;
+        }
+
+        .focus-content h2 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .focus-content h2 i {
+            color: var(--secondary);
+            font-size: 2rem;
+        }
+
+        .focus-meta {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 1.5rem;
+        }
+
+        .meta-item h4 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+
+        .meta-item p {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .activity-list {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .activity-list li {
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .activity-list li i {
+            color: var(--secondary);
+            margin-top: 5px;
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 768px) {
+            .focus-hero {
+                background-attachment: scroll;
+                min-height: 220px;
+            }
+            .focus-content h2 {
+                font-size: 1.9rem;
+                flex-wrap: wrap;
+            }
+            .focus-row {
+                gap: 2rem;
+                margin-bottom: 4rem;
+            }
+            .focus-meta {
+                flex-wrap: wrap;
+                gap: 0.75rem;
+            }
+            .focus-image img {
+                height: 240px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .focus-hero {
+                height: 35vh;
+            }
+            .focus-content h2 {
+                font-size: 1.55rem;
+            }
+            .focus-image img {
+                height: 200px;
+            }
+            .focus-row {
+                gap: 1.25rem;
+                margin-bottom: 2.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="nav-container container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>ARVA NGO<span> Federation</span></h1>
+                </a>
+            </div>
+            <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
+            <nav class="nav-links">
+                <div class="nav-item"><a href="index.html">Home</a></div>
+                <div class="nav-item"><a href="about.html">About Us</a></div>
+                <div class="nav-item active"><a href="focus-areas.html">Focus Areas</a></div>
+                <div class="nav-item"><a href="services.html">Services</a></div>
+                <div class="nav-item"><a href="project.html">Projects</a></div>
+                <div class="nav-item"><a href="gallery.html">Gallery</a></div>
+                <div class="nav-item"><a href="contact.html">Contact Us</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="focus-hero">
+        <div class="reveal fade-in-visible">
+            <h1>Our Focus Areas</h1>
+            <p>Targeted interventions for maximum community impact.</p>
+        </div>
+    </section>
+
+    <div class="section container">
+        <!-- Education -->
+        <section id="education" class="focus-row reveal">
+            <div class="focus-image">
+                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2022&auto=format&fit=crop"
+                    alt="Education">
+            </div>
+            <div class="focus-content">
+                <h2><i class="fa-solid fa-graduation-cap"></i> Education</h2>
+                <div class="focus-meta">
+                    <div class="meta-item">
+                        <h4>Problem Statement</h4>
+                        <p>High dropout rates in rural pre-secondary schools due to lack of resources.</p>
+                    </div>
+                </div>
+                <h4 style="color: var(--secondary); margin-bottom: 1rem;">What We Do</h4>
+                <p>We work with schools to modernize infrastructure and provide teacher training, ensuring that rural
+                    education matches urban standards.</p>
+                <ul class="activity-list">
+                    <li><i class="fa-solid fa-check"></i> Smart Classroom Implementation in 50+ rural schools.</li>
+                    <li><i class="fa-solid fa-check"></i> Digital Literacy project for primary students.</li>
+                    <li><i class="fa-solid fa-check"></i> Scholarship Facilitation for higher secondary education.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Health -->
+        <section id="health" class="focus-row reveal">
+            <div class="focus-image">
+                <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=2080&auto=format&fit=crop"
+                    alt="Health">
+            </div>
+            <div class="focus-content">
+                <h2><i class="fa-solid fa-heart-pulse"></i> Health</h2>
+                <div class="focus-meta">
+                    <div class="meta-item">
+                        <h4>Problem Statement</h4>
+                        <p>Limited access to specialized healthcare and lack of preventive health awareness.</p>
+                    </div>
+                </div>
+                <h4 style="color: var(--secondary); margin-bottom: 1rem;">What We Do</h4>
+                <p>Strengthening community health networks and facilitating mobile health camps in remote districts.</p>
+                <ul class="activity-list">
+                    <li><i class="fa-solid fa-check"></i> Collaborative Mobile Health Units for remote villages.</li>
+                    <li><i class="fa-solid fa-check"></i> Maternal & Child Nutrition Awareness Drives.</li>
+                    <li><i class="fa-solid fa-check"></i> Specialized Medical Camps (Vision, Dental, Primary Care).</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Environment -->
+        <section id="environment" class="focus-row reveal">
+            <div class="focus-image">
+                <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=2013&auto=format&fit=crop"
+                    alt="Environment">
+            </div>
+            <div class="focus-content">
+                <h2><i class="fa-solid fa-leaf"></i> Environment</h2>
+                <div class="focus-meta">
+                    <div class="meta-item">
+                        <h4>Problem Statement</h4>
+                        <p>Soil degradation and water scarcity impacting local ecosystems and livelihoods.</p>
+                    </div>
+                </div>
+                <h4 style="color: var(--secondary); margin-bottom: 1rem;">What We Do</h4>
+                <p>Promoting sustainable conservation practices and renewable energy adoption at the village level.</p>
+                <ul class="activity-list">
+                    <li><i class="fa-solid fa-check"></i> Community Reforestation (Afforestation) project.</li>
+                    <li><i class="fa-solid fa-check"></i> Rainwater Harvesting System installations.</li>
+                    <li><i class="fa-solid fa-check"></i> Waste Management training for rural households.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Agriculture -->
+        <section id="agriculture" class="focus-row reveal">
+            <div class="focus-image">
+                <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1932&auto=format&fit=crop"
+                    alt="Agriculture">
+            </div>
+            <div class="focus-content">
+                <h2><i class="fa-solid fa-wheat-awn"></i> Agriculture</h2>
+                <div class="focus-meta">
+                    <div class="meta-item">
+                        <h4>Problem Statement</h4>
+                        <p>Small farmers struggle with low yields due to traditional, inefficient farming methods.</p>
+                    </div>
+                </div>
+                <h4 style="color: var(--secondary); margin-bottom: 1rem;">What We Do</h4>
+                <p>Training farmers in organic farming and climate-resilient agricultural techniques.</p>
+                <ul class="activity-list">
+                    <li><i class="fa-solid fa-check"></i> Organic Farming Certification support.</li>
+                    <li><i class="fa-solid fa-check"></i> Seed Bank creation for local crop varieties.</li>
+                    <li><i class="fa-solid fa-check"></i> Technical workshops on soil health and drip irrigation.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Women & Youth Empowerment -->
+        <section id="empowerment" class="focus-row reveal">
+            <div class="focus-image">
+                <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=2070&auto=format&fit=crop"
+                    alt="Empowerment">
+            </div>
+            <div class="focus-content">
+                <h2><i class="fa-solid fa-users"></i> Empowerment</h2>
+                <div class="focus-meta">
+                    <div class="meta-item">
+                        <h4>Problem Statement</h4>
+                        <p>Lack of vocational skills and economic opportunities for rural women and youth.</p>
+                    </div>
+                </div>
+                <h4 style="color: var(--secondary); margin-bottom: 1rem;">What We Do</h4>
+                <p>Skill development and micro-entrepreneurship support to foster financial independence.</p>
+                <ul class="activity-list">
+                    <li><i class="fa-solid fa-check"></i> Vocational Skill Training (Tailoring, Digital Skills, Crafts).
+                    </li>
+                    <li><i class="fa-solid fa-check"></i> Self-Help Group (SHG) formation and training.</li>
+                    <li><i class="fa-solid fa-check"></i> Entrepreneurship Mentorship for high-school graduates.</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4 style="color: white; font-size: 1.5rem; margin-bottom: 1.5rem;">ARVA NGO<span> Federation</span>
+                </h4>
+                <p>Empowering grassroots organizations through capacity building, resources, and sustainable strategies
+                    for a better tomorrow.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html"><i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i>
+                            Home</a></li>
+                    <li><a href="about.html"><i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i> About
+                            Us</a></li>
+                    <li><a href="focus-areas.html"><i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i>
+                            Focus Areas</a></li>
+                    <li><a href="services.html"><i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i>
+                            Services</a></li>
+                    <li><a href="contact.html"><i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i>
+                            Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="services.html#schemes">Govt Schemes</a></li>
+                    <li><a href="services.html#csr">CSR Support</a></li>
+                    <li><a href="services.html#legal">Legal & Compliance</a></li>
+                    <li><a href="services.html#proposals">Proposal Writing</a></li>
+                    <li><a href="services.html#funding">Fundraising</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <p style="font-size: 0.9rem; margin-bottom: 1rem;">Subscribe to get the latest updates and news.</p>
+                <form class="newsletter-form">
+                    <div class="newsletter-input-group">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                </form>
+                <div style="margin-top: 2rem;">
+                    <ul style="opacity: 0.8;">
+                        <li style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.5rem;"><i
+                                class="fa-solid fa-location-dot"></i> Krishnagiri</li>
+                        <li style="display: flex; align-items: center; gap: 10px;"><i class="fa-solid fa-envelope"></i>
+                            arvongofedaration@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="developer-logo">
+            Powered by
+            <a href="https://aspirentech.com" target="_blank">
+                <img src="https://aspirentech.com/assets/aspirentech-logo-new-B7I5o4Z6.png" alt="AspirenTech"
+                    height="20">
+            </a>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
