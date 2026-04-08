@@ -33,7 +33,10 @@ body {
     overflow-x: hidden;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-family: 'Outfit', sans-serif;
     font-weight: 700;
     color: var(--primary);
@@ -106,13 +109,13 @@ header.scrolled {
     font-weight: 500;
 }
 
-.nav-item > a {
+.nav-item>a {
     padding: 0.5rem 0;
     color: var(--text-main);
 }
 
-.nav-item > a:hover,
-.nav-item.active > a {
+.nav-item>a:hover,
+.nav-item.active>a {
     color: var(--primary);
 }
 
@@ -154,13 +157,13 @@ header.scrolled {
     padding-left: 1.75rem;
 }
 
-.nav-item > a i {
+.nav-item>a i {
     font-size: 0.8rem;
     margin-left: 4px;
     transition: transform 0.3s ease;
 }
 
-.nav-item.dropdown:hover > a i {
+.nav-item.dropdown:hover>a i {
     transform: rotate(180deg);
 }
 
@@ -266,6 +269,7 @@ header.scrolled {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -712,15 +716,32 @@ footer::before {
     margin: 0 auto;
 }
 
-/* Developer Logo */
+/* Developer Logo / Footer Bottom Bar */
 .developer-logo {
     display: flex;
     align-items: center;
-    gap: 8px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.75rem;
     font-size: 0.85rem;
     color: rgba(255, 255, 255, 0.5);
-    padding-top: 1rem;
-    justify-content: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.developer-logo .copyright {
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 0.85rem;
+}
+
+.developer-logo .powered-by {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 0.85rem;
 }
 
 .developer-logo a {
@@ -735,6 +756,15 @@ footer::before {
 
 .developer-logo img:hover {
     opacity: 1;
+}
+
+@media (max-width: 576px) {
+    .developer-logo {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0.5rem;
+    }
 }
 
 /* =====================================================================
@@ -812,7 +842,7 @@ footer::before {
         left: 0;
         width: 100%;
         background: #ffffff;
-        box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
         border-top: 2px solid var(--secondary);
         z-index: 999;
         padding: 0.5rem 0 1rem;
@@ -820,8 +850,15 @@ footer::before {
     }
 
     @keyframes slideDown {
-        from { opacity: 0; transform: translateY(-8px); }
-        to   { opacity: 1; transform: translateY(0); }
+        from {
+            opacity: 0;
+            transform: translateY(-8px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 
     .nav-links.active {
@@ -832,7 +869,7 @@ footer::before {
         width: 100%;
     }
 
-    .nav-item > a {
+    .nav-item>a {
         display: block;
         padding: 0.85rem 1.5rem;
         font-size: 1rem;
@@ -840,8 +877,8 @@ footer::before {
         color: var(--text-main);
     }
 
-    .nav-item > a:hover,
-    .nav-item.active > a {
+    .nav-item>a:hover,
+    .nav-item.active>a {
         color: var(--primary);
         background: #f0f7ff;
         padding-left: 2rem;
@@ -849,7 +886,8 @@ footer::before {
 
     /* Hero */
     .hero {
-        background-attachment: scroll; /* Fix iOS parallax bug */
+        background-attachment: scroll;
+        /* Fix iOS parallax bug */
         height: 90vh;
         min-height: 500px;
     }
@@ -1108,6 +1146,7 @@ footer::before {
 /* ── focus-areas.html ── */
 /* focus-row is already flex-wrap:wrap with min-width:300px in page <style> */
 @media (max-width: 768px) {
+
     /* focus-content heading */
     .focus-content h2 {
         font-size: 2rem !important;
@@ -1270,5 +1309,37 @@ footer::before {
     .cta-btn-row {
         flex-direction: column !important;
         align-items: center;
+    }
+}
+
+.copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    font-size: 0.9rem;
+    color: #888;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.developer-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #bbb;
+}
+
+.developer-logo i {
+    color: var(--accent-color);
+    font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+    .copyright {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
     }
 }
