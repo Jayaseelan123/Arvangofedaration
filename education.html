@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education | ARVA NGO Federation</title>
+    <meta name="description" content="Empowering rural communities through smart classrooms, digital literacy, and quality education.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .reveal.fade-in-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .sub-hero {
+            background: linear-gradient(rgba(15, 76, 129, 0.8), rgba(15, 76, 129, 0.8)), url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2022&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            height: 45vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .content-section {
+            padding: 5rem 0;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 5rem;
+        }
+
+        @media (max-width: 768px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .grid-2:nth-child(even) {
+                direction: ltr;
+            }
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .feature-list li {
+            margin-bottom: 1.2rem;
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .feature-list li i {
+            color: var(--secondary);
+            margin-top: 5px;
+            font-size: 1.2rem;
+        }
+
+        .problem-statement {
+            background: #fff5f5;
+            padding: 3rem;
+            border-radius: 20px;
+            border-left: 5px solid #ff4d4d;
+            margin-bottom: 4rem;
+        }
+
+        .activity-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            border-top: 4px solid var(--primary);
+        }
+
+        .activity-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .photo-item {
+            border-radius: 15px;
+            overflow: hidden;
+            height: 300px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .photo-item:hover img {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="nav-container container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>ARVA NGO<span> Federation</span></h1>
+                </a>
+            </div>
+            <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
+            <nav class="nav-links">
+                <div class="nav-item"><a href="index.html">Home</a></div>
+                <div class="nav-item"><a href="about.html">About Us</a></div>
+                <div class="nav-item dropdown active">
+                    <a href="focus-areas.html">Focus Areas <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="health.html">Health</a></li>
+                        <li><a href="environment.html">Environment</a></li>
+                        <li><a href="agriculture.html">Agriculture</a></li>
+                        <li><a href="empowerment.html">Women & Youth Empowerment</a></li>
+                    </ul>
+                </div>
+                <div class="nav-item"><a href="services.html">Services</a></div>
+                <div class="nav-item"><a href="project.html">Projects</a></div>
+                <div class="nav-item"><a href="gallery.html">Gallery</a></div>
+                <div class="nav-item"><a href="contact.html">Contact Us</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sub Hero -->
+    <section class="sub-hero">
+        <div class="reveal fade-in-visible">
+            <h1>Education</h1>
+            <p>Empowering the next generation through knowledge and opportunity.</p>
+        </div>
+    </section>
+
+    <div class="container content-section">
+        
+        <!-- Problem Statement -->
+        <div class="problem-statement reveal">
+            <h3><i class="fa-solid fa-circle-exclamation" style="color: #ff4d4d; margin-right: 10px;"></i> Problem Statement</h3>
+            <p style="margin-top: 1rem; font-size: 1.1rem; color: #444;">High dropout rates in rural pre-secondary schools due to lack of resources, inadequate infrastructure, and limited access to modern learning tools. Many students in underserved areas fall behind their urban counterparts, creating a significant educational divide.</p>
+        </div>
+
+        <!-- What We Do -->
+        <div class="grid-2 reveal">
+            <div class="content">
+                <h2 style="margin-bottom: 1.5rem;">What We Do</h2>
+                <p>We work directly with rural schools to modernize infrastructure and provide teacher training, ensuring that rural education matches urban standards. Our goal is to create an environment where every child feels inspired to learn and stay in school.</p>
+                <ul class="feature-list">
+                    <li><i class="fa-solid fa-circle-check"></i> Infrastructure upgrading for rural schools.</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Specialized training for rural teachers.</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Providing learning materials and digital resources.</li>
+                </ul>
+            </div>
+            <div class="image">
+                <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?q=80&w=2073&auto=format&fit=crop" alt="Teacher and students" style="border-radius: 20px; box-shadow: var(--shadow-md);">
+            </div>
+        </div>
+
+        <!-- Key Activities -->
+        <div class="reveal">
+            <h2 style="text-align: center; margin-bottom: 3rem;">Key Activities</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <div class="activity-card">
+                    <i class="fa-solid fa-chalkboard-user" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 1.5rem;"></i>
+                    <h3>Smart Classrooms</h3>
+                    <p>Implementing digital learning tools and interactive whiteboards in over 50 rural schools to enhance engagement.</p>
+                </div>
+                <div class="activity-card">
+                    <i class="fa-solid fa-laptop-code" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 1.5rem;"></i>
+                    <h3>Digital Literacy</h3>
+                    <p>Training sessions for primary and secondary students on computer basics, internet safety, and software skills.</p>
+                </div>
+                <div class="activity-card">
+                    <i class="fa-solid fa-award" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 1.5rem;"></i>
+                    <h3>Scholarship Programs</h3>
+                    <p>Facilitating financial support and scholarships for bright students from low-income families to pursue higher education.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Photos -->
+        <div class="reveal" style="margin-top: 6rem;">
+            <h2 style="text-align: center; margin-bottom: 1rem;">Work in Action</h2>
+            <p style="text-align: center; color: var(--text-muted);">Glimpses of our educational initiatives on the ground.</p>
+            <div class="photo-gallery">
+                <div class="photo-item"><img src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?q=80&w=2070&auto=format&fit=crop" alt="School Activities"></div>
+                <div class="photo-item"><img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2064&auto=format&fit=crop" alt="Students learning"></div>
+                <div class="photo-item"><img src="https://images.unsplash.com/photo-1524178232363-1fb28f74b671?q=80&w=2070&auto=format&fit=crop" alt="Classroom setup"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4 style="color: white; font-size: 1.5rem; margin-bottom: 1.5rem;">ARVA NGO<span> Federation</span></h4>
+                <p>Empowering grassroots organizations through capacity building, resources, and sustainable strategies for a better tomorrow.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html"><i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i> Home</a></li>
+                    <li><a href="about.html"><i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i> About Us</a></li>
+                    <li><a href="focus-areas.html"><i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i> Focus Areas</a></li>
+                    <li><a href="services.html"><i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i> Services</a></li>
+                    <li><a href="contact.html"><i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i> Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="services.html#schemes">Govt Schemes</a></li>
+                    <li><a href="services.html#csr">CSR Support</a></li>
+                    <li><a href="services.html#legal">Legal & Compliance</a></li>
+                    <li><a href="services.html#proposals">Proposal Writing</a></li>
+                    <li><a href="services.html#funding">Fundraising</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <p style="font-size: 0.9rem; margin-bottom: 1rem;">Subscribe to get the latest updates and news.</p>
+                <form class="newsletter-form">
+                    <div class="newsletter-input-group">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                </form>
+                <div style="margin-top: 2rem;">
+                    <ul style="opacity: 0.8;">
+                        <li style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.5rem;"><i class="fa-solid fa-location-dot"></i> Krishnagiri</li>
+                        <li style="display: flex; align-items: center; gap: 10px;"><i class="fa-solid fa-envelope"></i> arvongofedaration@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="developer-logo">
+            Powered by
+            <a href="https://aspirentech.com" target="_blank">
+                <img src="https://aspirentech.com/assets/aspirentech-logo-new-B7I5o4Z6.png" alt="AspirenTech" height="20">
+            </a>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -64,4 +64,18 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
+    // 5. Mobile Dropdown Toggle
+    const dropdowns = document.querySelectorAll('.nav-item.dropdown');
+    dropdowns.forEach(dropdown => {
+        const link = dropdown.querySelector('a');
+        link.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768) {
+                // If the user clicks the arrow part or the link itself on mobile
+                // Toggle the dropdown visibility
+                e.preventDefault();
+                dropdown.classList.toggle('active');
+            }
+        });
+    });
+
 });

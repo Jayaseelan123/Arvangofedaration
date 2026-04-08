@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environment | ARVA NGO Federation</title>
+    <meta name="description" content="Conservation efforts, climate action, and sustainable practices for a greener planet.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .reveal.fade-in-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .sub-hero {
+            background: linear-gradient(rgba(15, 76, 129, 0.8), rgba(15, 76, 129, 0.8)), url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=2013&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            height: 45vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .content-section {
+            padding: 5rem 0;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 5rem;
+        }
+
+        @media (max-width: 768px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .feature-list li {
+            margin-bottom: 1.2rem;
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .feature-list li i {
+            color: var(--secondary);
+            margin-top: 5px;
+            font-size: 1.2rem;
+        }
+
+        .problem-statement {
+            background: #e6f7ff;
+            padding: 3rem;
+            border-radius: 20px;
+            border-left: 5px solid #00a2ff;
+            margin-bottom: 4rem;
+        }
+
+        .activity-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            border-top: 4px solid var(--primary);
+        }
+
+        .activity-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .photo-item {
+            border-radius: 15px;
+            overflow: hidden;
+            height: 300px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .photo-item:hover img {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="nav-container container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>ARVA NGO<span> Federation</span></h1>
+                </a>
+            </div>
+            <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
+            <nav class="nav-links">
+                <div class="nav-item"><a href="index.html">Home</a></div>
+                <div class="nav-item"><a href="about.html">About Us</a></div>
+                <div class="nav-item dropdown active">
+                    <a href="focus-areas.html">Focus Areas <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="health.html">Health</a></li>
+                        <li><a href="environment.html">Environment</a></li>
+                        <li><a href="agriculture.html">Agriculture</a></li>
+                        <li><a href="empowerment.html">Women & Youth Empowerment</a></li>
+                    </ul>
+                </div>
+                <div class="nav-item"><a href="services.html">Services</a></div>
+                <div class="nav-item"><a href="project.html">Projects</a></div>
+                <div class="nav-item"><a href="gallery.html">Gallery</a></div>
+                <div class="nav-item"><a href="contact.html">Contact Us</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sub Hero -->
+    <section class="sub-hero">
+        <div class="reveal fade-in-visible">
+            <h1>Environment</h1>
+            <p>Protecting our natural heritage for a sustainable and greener future.</p>
+        </div>
+    </section>
+
+    <div class="container content-section">
+        
+        <!-- Problem Statement -->
+        <div class="problem-statement reveal">
+            <h3><i class="fa-solid fa-circle-exclamation" style="color: #00a2ff; margin-right: 10px;"></i> Problem Statement</h3>
+            <p style="margin-top: 1rem; font-size: 1.1rem; color: #444;">Rapid soil degradation and increasing water scarcity are severely impacting local ecosystems and the livelihoods of rural communities. The lack of sustainable waste management further exacerbates environmental challenges in these areas.</p>
+        </div>
+
+        <!-- What We Do -->
+        <div class="grid-2 reveal">
+            <div class="content">
+                <h2 style="margin-bottom: 1.5rem;">What We Do</h2>
+                <p>We promote sustainable conservation practices and facilitate the adoption of renewable energy at the village level. Our initiatives focus on rehabilitating land, conserving water, and creating a culture of environmental responsibility.</p>
+                <ul class="feature-list">
+                    <li><i class="fa-solid fa-circle-check"></i> Reforestation and biodiversity protection.</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Implementation of water conservation systems.</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Rural waste management and recycling training.</li>
+                </ul>
+            </div>
+            <div class="image">
+                <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=2013&auto=format&fit=crop" alt="Nature conservation" style="border-radius: 20px; box-shadow: var(--shadow-md);">
+            </div>
+        </div>
+
+        <!-- Key Activities -->
+        <div class="reveal">
+            <h2 style="text-align: center; margin-bottom: 3rem;">Key Activities</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <div class="activity-card">
+                    <i class="fa-solid fa-tree" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 1.5rem;"></i>
+                    <h3>Afforestation project</h3>
+                    <p>Community-led tree planting drives to restore local forests, increase green cover, and prevent soil erosion.</p>
+                </div>
+                <div class="activity-card">
+                    <i class="fa-solid fa-cloud-rain" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 1.5rem;"></i>
+                    <h3>Rainwater Harvesting</h3>
+                    <p>Installing structural harvesting systems in schools and community centers to secure water during dry seasons.</p>
+                </div>
+                <div class="activity-card">
+                    <i class="fa-solid fa-recycle" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 1.5rem;"></i>
+                    <h3>Waste Management</h3>
+                    <p>Training rural households on waste segregation, composting, and reducing the use of single-use plastics.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Photos -->
+        <div class="reveal" style="margin-top: 6rem;">
+            <h2 style="text-align: center; margin-bottom: 1rem;">Conservation Gallery</h2>
+            <p style="text-align: center; color: var(--text-muted);">Steps toward a cleaner and greener environment.</p>
+            <div class="photo-gallery">
+                <div class="photo-item"><img src="https://images.unsplash.com/photo-1588661748212-09419d2ec06f?q=80&w=1974&auto=format&fit=crop" alt="Tree planting"></div>
+                <div class="photo-item"><img src="https://images.unsplash.com/photo-1544333333-6625841496a7?q=80&w=2028&auto=format&fit=crop" alt="Rainwater harvesting setup"></div>
+                <div class="photo-item"><img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?q=80&w=2070&auto=format&fit=crop" alt="Recycling initiative"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4 style="color: white; font-size: 1.5rem; margin-bottom: 1.5rem;">ARVA NGO<span> Federation</span></h4>
+                <p>Empowering grassroots organizations through capacity building, resources, and sustainable strategies for a better tomorrow.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html"><i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i> Home</a></li>
+                    <li><a href="about.html"><i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i> About Us</a></li>
+                    <li><a href="focus-areas.html"><i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i> Focus Areas</a></li>
+                    <li><a href="services.html"><i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i> Services</a></li>
+                    <li><a href="contact.html"><i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i> Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="services.html#schemes">Govt Schemes</a></li>
+                    <li><a href="services.html#csr">CSR Support</a></li>
+                    <li><a href="services.html#legal">Legal & Compliance</a></li>
+                    <li><a href="services.html#proposals">Proposal Writing</a></li>
+                    <li><a href="services.html#funding">Fundraising</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col" id="footer-contact">
+                <h4>Newsletter</h4>
+                <p style="font-size: 0.9rem; margin-bottom: 1rem;">Subscribe to get the latest updates and news.</p>
+                <form class="newsletter-form">
+                    <div class="newsletter-input-group">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                </form>
+                <div style="margin-top: 2rem;">
+                    <ul style="opacity: 0.8;">
+                        <li style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.5rem;"><i class="fa-solid fa-location-dot"></i> Krishnagiri</li>
+                        <li style="display: flex; align-items: center; gap: 10px;"><i class="fa-solid fa-envelope"></i> arvongofedaration@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="developer-logo">
+            Powered by
+            <a href="https://aspirentech.com" target="_blank">
+                <img src="https://aspirentech.com/assets/aspirentech-logo-new-B7I5o4Z6.png" alt="AspirenTech" height="20">
+            </a>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
