@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap');
 
 :root {
-    --primary: #0f4c81;
-    --primary-light: #1e6091;
+    --primary: #05243f;
+    --primary-light: #2e516b;
     --secondary: #27ae60;
     --accent: #F4C430;
     --bg-light: #f8fafc;
@@ -394,26 +394,17 @@ header.scrolled {
    ============================== */
 .focus-grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
 
 .focus-card {
-    grid-column: span 2;
     background: var(--bg-white);
     padding: 2.5rem 1.5rem;
     border-radius: 12px;
     text-align: center;
     box-shadow: var(--shadow-sm);
     transition: var(--transition);
-}
-
-.focus-card:nth-child(4) {
-    grid-column: 2 / 4;
-}
-
-.focus-card:nth-child(5) {
-    grid-column: 4 / 6;
 }
 
 .focus-card:hover {
@@ -773,19 +764,7 @@ footer {
     }
 
     .focus-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    .focus-card {
-        grid-column: span 2;
-    }
-
-    .focus-card:nth-child(4) {
-        grid-column: span 2;
-    }
-
-    .focus-card:nth-child(5) {
-        grid-column: 2 / 4;
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .footer-container {
@@ -917,14 +896,8 @@ footer {
 
     /* Focus grid */
     .focus-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(3, 1fr);
         gap: 1.25rem;
-    }
-
-    .focus-card,
-    .focus-card:nth-child(4),
-    .focus-card:nth-child(5) {
-        grid-column: span 1;
     }
 
     /* Impact */
@@ -1022,16 +995,10 @@ footer {
         font-size: 1.6rem;
     }
 
-    /* Focus grid → single column */
+    /* Focus grid */
     .focus-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
-    }
-
-    .focus-card,
-    .focus-card:nth-child(4),
-    .focus-card:nth-child(5) {
-        grid-column: span 1;
     }
 
     /* Impact → stacked */
@@ -1305,4 +1272,5 @@ footer {
     justify-content: center;
     color: white;
     text-align: center;
+    margin-top: 43px;
 }
