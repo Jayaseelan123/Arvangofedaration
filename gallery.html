@@ -32,15 +32,14 @@
         }
 
         .gallery-grid {
-            display: block;
-            columns: 3 300px;
-            column-gap: 1.5rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
             margin-top: 3rem;
         }
 
         .gallery-item {
-            break-inside: avoid;
-            margin-bottom: 1.5rem;
+            aspect-ratio: 4 / 3;
             border-radius: 12px;
             overflow: hidden;
             box-shadow: var(--shadow-sm);
@@ -49,14 +48,16 @@
             transition: var(--transition);
         }
 
-        .gallery-item:hover {
-            transform: scale(1.02);
-            box-shadow: var(--shadow-md);
-        }
-
         .gallery-item img {
             width: 100%;
+            height: 100%;
+            object-fit: cover;
             display: block;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
         }
 
         .gallery-overlay {
@@ -167,7 +168,7 @@
                     <a href="#">Focus Areas <i class="fa-solid fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
                         <li><a href="education.html">Education</a></li>
-                        <li><a href="health.html">Health</a></li>
+                        <li><a href="mental  health.html">Mental health</a></li>
                         <li><a href="environment.html">Environment</a></li>
                         <li><a href="agriculture.html">Agriculture</a></li>
                         <li><a href="empowerment.html">Women & Youth Empowerment</a></li>
@@ -196,50 +197,86 @@
 
 
             <div class="gallery-grid" id="galleryGrid">
-                <!-- DMIT -->
-                <div class="gallery-item" data-category="dmit">
-                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
-                    <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2070&auto=format&fit=crop"
-                        alt="Scientific Brain Mapping">
+                <!-- Image 1 -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?q=80&w=2070&auto=format&fit=crop" alt="Education Initiative">
                 </div>
-                <!-- Training -->
-                <div class="gallery-item" data-category="training">
-                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
-                    <img src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?q=80&w=2070&auto=format&fit=crop"
-                        alt="Student Training Session">
+                <!-- Image 2 -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2022&auto=format&fit=crop" alt="Rural Learning">
                 </div>
-                <!-- Workshops -->
-                <div class="gallery-item" data-category="workshops">
-                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
-                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2022&auto=format&fit=crop"
-                        alt="Interactive Workshop">
+                <!-- Image 3 -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?q=80&w=2073&auto=format&fit=crop" alt="Classroom Environment">
                 </div>
-                <!-- Outdoor -->
-                <div class="gallery-item" data-category="outdoor">
-                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
-                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=2013&auto=format&fit=crop"
-                        alt="Outdoor Team Building">
+                <!-- Image 4 -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=2080&auto=format&fit=crop" alt="Healthcare Camp">
                 </div>
-                <!-- DMIT 2 -->
-                <div class="gallery-item" data-category="dmit">
-                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
-                    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=2080&auto=format&fit=crop"
-                        alt="Fingerprint Analysis">
+                <!-- Image 5 -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1581056770614-259160492cb2?q=80&w=1974&auto=format&fit=crop" alt="Health Awareness">
                 </div>
-                <!-- Training 2 -->
-                <div class="gallery-item" data-category="training">
-                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
-                    <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1932&auto=format&fit=crop"
-                        alt="Professional Development">
+                <!-- Image 6 -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=2013&auto=format&fit=crop" alt="Environment Protection">
                 </div>
-
-                <div class="gallery-item" data-category="training">
-                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
-                    <img src="images/gallery-hero.png" alt="Professional Development">
+                <!-- Image 7 -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1932&auto=format&fit=crop" alt="Agricultural Support">
                 </div>
-
-
-
+                <!-- Image 8 -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1590402494682-cd3fb53b1f71?q=80&w=2070&auto=format&fit=crop" alt="Women Leadership">
+                </div>
+                <!-- Image 9 -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=2070&auto=format&fit=crop" alt="Empowerment Training">
+                </div>
+                <!-- Image 10 -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb7?q=80&w=2070&auto=format&fit=crop" alt="Community Growth">
+                </div>
+                <!-- Image 11 -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2064&auto=format&fit=crop" alt="Knowledge Sharing">
+                </div>
+                <!-- Image 12 -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1524178232363-1fb28f74b671?q=80&w=2070&auto=format&fit=crop" alt="Future Generation">
+                </div>
+                <!-- Image 13 -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1495107334309-fcf20504a5ab?q=80&w=2070&auto=format&fit=crop" alt="Organic Farming">
+                </div>
+                <!-- Image 14 -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1563811462-23097c271813?q=80&w=2070&auto=format&fit=crop" alt="Herbal Research">
+                </div>
+                <!-- Image 15 -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop" alt="Youth Empowerment">
+                </div>
+                <!-- Image 16 -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1504275107627-0c2ba7a43dba?q=80&w=1974&auto=format&fit=crop" alt="Rural Progress">
+                </div>
+                <!-- Image 17 -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1544333333-6625841496a7?q=80&w=2028&auto=format&fit=crop" alt="Water Conservation">
+                </div>
+                <!-- Image 18 -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2084&auto=format&fit=crop" alt="Digital Literacy">
+                </div>
+                <!-- Image 19 -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&w=2070&auto=format&fit=crop" alt="Collaborative Action">
+                </div>
+                <!-- Image 20 -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1518152006812-edab29b069ac?q=80&w=2070&auto=format&fit=crop" alt="Compassion in Action">
+                </div>
             </div>
         </div>
     </section>
